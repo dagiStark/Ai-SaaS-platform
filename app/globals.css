@@ -323,11 +323,11 @@
     @apply h-full flex-col justify-between md:flex md:gap-4;
   }
 
-  .sidebar-nav_elements {
+  .sidebar-nav-elements {
     @apply hidden w-full flex-col items-start gap-2 md:flex;
   }
 
-  .sidebar-nav_element {
+  .sidebar-nav-element {
     @apply flex-center p-16-semibold w-full whitespace-nowrap rounded-full bg-cover  transition-all hover:bg-purple-100 hover:shadow-inner;
   }
 
