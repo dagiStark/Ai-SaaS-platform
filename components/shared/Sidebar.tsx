@@ -51,6 +51,7 @@ const Sidebar = () => {
                 );
               })}
             </ul>
+            
             <ul className="sidebar-nav-elements">
               {navLinks.slice(6).map(({ label, route, icon }) => {
                 const isActive = route === pathname;
