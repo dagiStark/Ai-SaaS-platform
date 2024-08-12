@@ -8,14 +8,22 @@ import { handleError } from "../utils";
 
 // CREATE
 export async function createUser(user: CreateUserParams) {
+  console.log("creating user.....")
   try {
     await connectToDB();
 
     const newUser = await User.create(user);
 
-    return JSON.parse(JSON.stringify(newUser));
+    // Convert the user to a plain JSON object
+    const plainUser = JSON.parse(JSON.stringify(newUser));
+
+    // Log the created user
+    console.log("User successfully created:", plainUser);
+
+    return plainUser;
   } catch (error) {
     handleError(error);
+    return null; // Explicitly return null on failure
   }
 }
 

@@ -52,7 +52,7 @@ export async function POST(req: Request) {
     });
   }
 
-  // Get the ID and type
+  // Get the ID and type23
   const { id } = evt.data;
   const eventType = evt.type;
 
