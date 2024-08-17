@@ -33,6 +33,8 @@ const MediaUploader = ({
       secureURL: result?.info?.secureURL
     }))
 
+    onValueChange(result?.info?.public_id)
+
     toast({
       title: "Image uploaded successfully",
       description: "Your image has been uploaded to Cloudinary",
@@ -79,7 +81,7 @@ const MediaUploader = ({
               </div>
             </>
           ) : (
-            <div className="media-uploader-cta items-center flex flex-col" onClick={() => open()}>
+            <div className="media-uploader-cta items-center flex flex-col cursor-pointer" onClick={() => open()}>
               <div className="media-uploader_cta-image">
                 <Image
                   src="/assets/icons/add.svg"
